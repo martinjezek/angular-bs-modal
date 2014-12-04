@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+    include ./head.jade
+    body
+        div.container
+            block header
+                div.page-header
+                    h1 Angular BS Modal
+                        = ' '
+                        small AngularJS plugin
+
+                div.well
+                    p This plugin provides an extension of Bootstrap Modal for AngularJS
+
+            div.jumbotron
+                block content
+

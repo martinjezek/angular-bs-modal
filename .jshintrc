@@ -1,0 +1,27 @@
+{
+    "quotmark"      : true,
+    "browser"       : true,
+    "devel"         : true,
+    "node"          : true,
+    "jquery"        : true,
+    "curly"         : false,
+    "expr"          : true,
+    "globalstrict"  : true,
+    "trailing"      : true,
+    "camelcase"     : true,
+    "unused"        : false,
+    "indent"        : 4,
+    "globals": {
+        "angular"       : false,
+        "it"            : false,
+        "xit"           : false,
+        "describe"      : false,
+        "xdescribe"     : false,
+        "before"        : false,
+        "beforeEach"    : false,
+        "after"         : false,
+        "afterEach"     : false,
+        "expect"        : false,
+        "spyOn"         : false
+    }
+}

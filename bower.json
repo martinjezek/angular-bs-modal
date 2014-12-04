@@ -1,0 +1,29 @@
+{
+  "name": "angular-bs-modal",
+  "version": "0.0.0",
+  "main": [
+    "dist/js/angular-bs-modal.js",
+    "dist/js/angular-bs-modal.min.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "*.md",
+    "demo",
+    "bower_components",
+    "node_modules",
+    "src",
+    ".bowerrc",
+    ".gitattributes",
+    ".gitignore",
+    ".jshintrc",
+    ".sublime-project",
+    "gulpfile.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  },
+  "devDependencies": {
+    "bootstrap": "~3.3.0"
+  }
+}
