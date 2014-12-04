@@ -1,6 +1,20 @@
 extends ./partials/layout.jade
 
 block content
-    p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
-    p
-        button.btn.btn-lg.btn-success(ng-click='openModal()') Open Modal
+
+    div.jumbotron(ng-controller='DemoController')
+        p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
+        p
+            button.btn.btn-lg.btn-success(ng-click='openModal()') Open Modal
+
+    script(type='text/ng-template', id='open-modal.ng')
+        div.modal-header
+            button.close(type='button', data-dismiss='modal')
+                span(aria-hidden='true') &times;
+                span.sr-only Close
+            h4.modal-title Modal title
+        div.modal-body
+            p {{asdf}} {{lorem}} {{m.aaa}} {{$modalOptions.size}}
+        div.modal-footer
+            button.btn.btn-default(type='button', data-dismiss='modal') Close
+            button.btn.btn-primary(ng-click='submit()', type='button') Save changes
