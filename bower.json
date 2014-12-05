@@ -1,6 +1,6 @@
 {
   "name": "angular-bs-modal",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": [
     "dist/js/angular-bs-modal.js",
     "dist/js/angular-bs-modal.min.js"
@@ -25,6 +25,5 @@
     "bootstrap": "~3.3.1",
     "angular": "~1.3.5"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
