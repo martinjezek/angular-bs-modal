@@ -11,6 +11,7 @@ module.exports = function(gulp, plugins) {
         gulp.watch(['./demo/src/jade/**/*.jade'], ['jade:demo']);
         gulp.watch(['./demo/src/sass/**/*.scss', './demo/src/sass/**/*.sass'], ['sass:demo']);
         gulp.watch(['./demo/src/js/**/*.js'], ['js:demo']);
+        gulp.watch(['./demo/src/data/**/*.*'], ['copy:demo-data']);
         // dist
         gulp.watch(['./src/sass/**/*.scss', './src/sass/**/*.sass'], ['sass:dist']);
         gulp.watch(['./src/js/**/*.js'], ['js:dist']);

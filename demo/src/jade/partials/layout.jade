@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang='en', ng-app='myApp')
     include ./head.jade
     body
         div.container
@@ -12,6 +12,5 @@ html(lang="en")
                 div.well
                     p This plugin provides an extension of Bootstrap Modal for AngularJS
 
-            div.jumbotron
-                block content
-
+            block content
+                div.jumbotron

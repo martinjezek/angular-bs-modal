@@ -1,3 +1,43 @@
 extends ./partials/layout.jade
 
 block content
+
+    div.jumbotron(ng-controller='DemoController')
+        p.text-center Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.
+        p.text-center
+            button.btn.btn-lg.btn-success(ng-click='addItem()') Add Item
+        table.table.table-striped(ng-show='items.length', ng-cloak)
+            thead
+                tr
+                    th.col-xs-2 Category
+                    th.col-xs-5 Name
+                    th.col-xs-5 Description
+            tbody
+                tr(ng-repeat='item in items')
+                    td {{item.category}}
+                    td {{item.name}}
+                    td {{item.description}}
+
+    script(type='text/ng-template', id='/modal-add-item.html')
+        form.form-horizontal(name='formAddItem', ng-submit='formAddItem.$valid && save()', method='post', role='form', novalidate)
+            div.modal-header
+                button.close(type='button', data-dismiss='modal')
+                    span(aria-hidden='true') &times;
+                    span.sr-only Close
+                h4.modal-title Add Item
+            div.modal-body
+                div.form-group(ng-class='{"has-error": formAddItem.name.$invalid && formAddItem.name.$dirty || formAddItem.name.$invalid && formAddItem.$submitted}')
+                    label.control-label.col-sm-3(for='form-name') Name
+                    div.col-sm-9
+                        input.form-control(ng-model='item.name', required, type='text', name='name', id='form-name', placeholder='Name')
+                div.form-group(ng-class='{"has-error": formAddItem.description.$invalid && formAddItem.description.$dirty || formAddItem.description.$invalid && formAddItem.$submitted}')
+                    label.control-label.col-sm-3(for='form-description') Description
+                    div.col-sm-9
+                        textarea.form-control(ng-model='item.description', required, rows='4', name='description', id='form-description', placeholder='Description')
+                div.form-group.last
+                    label.control-label.col-sm-3(for='form-name') Category
+                    div.col-sm-9
+                        select.form-control(ng-model='item.category', ng-options='category.id as category.name for category in categories', type='text', name='category', id='form-name', placeholder='Name')
+            div.modal-footer
+                button.btn.btn-default(type='button', data-dismiss='modal') Close
+                input.btn.btn-primary(type='submit', value='Save')
