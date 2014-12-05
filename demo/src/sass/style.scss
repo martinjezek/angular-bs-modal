@@ -5,9 +5,12 @@
 }
 
 .jumbotron {
-    text-align: center;
     margin-bottom: 20px;
     :last-child {
         margin-bottom: 0px;
     }
+}
+
+.modal-body .last {
+    margin-bottom: 0px;
 }

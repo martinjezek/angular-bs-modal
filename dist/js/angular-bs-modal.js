@@ -21,17 +21,19 @@
                 cache: $templateCache
             }).success(function(content) {
                 {
-                    var modalTemplate = angular.element(modalTemplateString), modalContent = modalTemplate.find(".modal-content").eq(0);
-                    modalTemplate.find(".modal-dialog").eq(0);
+                    var modalInstance = angular.element(modalTemplateString), modalContent = modalInstance.find(".modal-content").eq(0);
+                    modalInstance.find(".modal-dialog").eq(0);
                 }
-                modalContent.html(content);
+                modalContent.html(content), modalInstance.close = function() {
+                    modalInstance.modal("hide");
+                };
                 var controllerInstance, modalScope = (modalOptions.scope || $rootScope).$new(), controllerLocals = {};
                 modalScope.$modalOptions = {
                     size: options.size
-                }, modalOptions.controller && (controllerLocals.$scope = modalScope, controllerLocals.$modalInstance = modalTemplate, 
+                }, modalOptions.controller && (controllerLocals.$scope = modalScope, controllerLocals.modalInstance = modalInstance, 
                 controllerInstance = $controller(modalOptions.controller, controllerLocals), modalOptions.controllerAs && (modalScope[modalOptions.controllerAs] = controllerInstance));
-                var modalTemplateCompiled = $compile(modalTemplate)(modalScope);
-                return modalContainer.append(modalTemplateCompiled), modalTemplate.modal(options).on("hidden.bs.modal", function() {
+                var modalTemplateCompiled = $compile(modalInstance)(modalScope);
+                return modalContainer.append(modalTemplateCompiled), modalInstance.modal(options).on("hidden.bs.modal", function() {
                     modalContainer.html("");
                 }), options;
             });

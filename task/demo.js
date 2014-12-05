@@ -6,7 +6,7 @@ module.exports = function(gulp, plugins) {
     // Compile a source demo data to a Demo build folder.
     // $ gulp demo
     //
-    gulp.task('demo', ['clean:demo', 'jade:demo', 'sass:demo', 'js:demo']);
+    gulp.task('demo', ['clean:demo', 'jade:demo', 'sass:demo', 'js:demo', 'copy:demo-data']);
 
     // Clean:demo /clean/
     // Clean task remove all files and folders from the Demo build folder.

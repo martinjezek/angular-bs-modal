@@ -7,24 +7,28 @@
     ]);
 
     app.controller('DemoController', function ($scope, modal) {
-        $scope.lorem = 'Ipsum';
-        $scope.openModal = function () {
-            var openModal = modal.open({
+        $scope.items = [];
+        $scope.addItem = function () {
+            modal.open({
                 scope: $scope,
-                templateUrl: 'open-modal.ng',
-                controller: 'ModalController',
-                controllerAs: 'm',
-                size: 'lg'
+                templateUrl: '/modal-add-item.html',
+                controller: 'ModalController'
             });
         };
     });
 
-    app.controller('ModalController', function ($scope, $modalInstance) {
-        this.aaa = 'aaaa';
-        $scope.asdf = 'asdf';
-        $scope.submit = function () {
-            console.log($modalInstance);
-            // $modalInstance.close($scope.selected.item);
+    app.controller('ModalController', function ($scope, modalInstance, $http) {
+        $scope.item = {};
+
+        $scope.categories = [];
+        $http.get('/data/categories.json').success(function (res) {
+            $scope.categories = res;
+            $scope.item.category = res[0].id; // ng-hack -> to select the first item
+        });
+
+        $scope.save = function () {
+            $scope.items.push($scope.item);
+            modalInstance.close();
         };
     });
 

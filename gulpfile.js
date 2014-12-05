@@ -17,6 +17,7 @@ var gulp            = require('gulp'),
         changelog   : require('conventional-changelog'),
         exec        : require('child_process').exec,
         argv        : require('yargs').argv,
+        copy        : require('ncp').ncp,
         del         : require('del'),
         fs          : require('fs')
     };
@@ -28,6 +29,7 @@ require('./task/dist')(gulp, plugins);
 require('./task/jade')(gulp, plugins);
 require('./task/sass')(gulp, plugins);
 require('./task/js')(gulp, plugins);
+require('./task/copy')(gulp, plugins);
 require('./task/watch')(gulp, plugins);
 require('./task/banner')(gulp, plugins);
 require('./task/connect')(gulp, plugins);
