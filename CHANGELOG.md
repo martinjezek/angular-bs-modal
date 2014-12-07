@@ -1,3 +1,11 @@
+### 0.0.2 (2014-12-07)
+
+
+#### Features
+
+* update project dependencies #4 ([60ca1fa1]([object Object]/commit/60ca1fa18f6da4e002eccc4e343601c7cddc9985))
+
+
 ### 0.0.1 (2014-12-05)
 
 
