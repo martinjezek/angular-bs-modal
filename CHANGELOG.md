@@ -1,3 +1,11 @@
+### 0.0.3 (2014-12-07)
+
+
+#### Features
+
+* remove a task folder from the Bower distribution #6 ([1f93cf12]([object Object]/commit/1f93cf12ee88730356a41db20fd5eac5b5bc4725))
+
+
 ### 0.0.2 (2014-12-07)
 
 

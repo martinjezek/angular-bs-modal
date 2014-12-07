@@ -1,6 +1,6 @@
 {
   "name": "angular-bs-modal",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "title": "Angular BS Modal",
   "description": "This plugin provides an extension of Bootstrap Modal for AngularJS",
   "homepage": "https://github.com/martinjezek/angular-bs-modal",
