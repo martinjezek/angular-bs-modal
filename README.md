@@ -17,7 +17,7 @@ bower install angular-bs-modal --save
 Link the script from `bower_components` folder.
 
 ```html
-<script src="/bower_components/angular-bs-modal/dist/angular-bs-modal.min.js"></script>
+<script src="/bower_components/angular-bs-modal/dist/js/angular-bs-modal.min.js"></script>
 ```
 
 Add `angular.bs.modal` as a dependency to your AngularJS application.
@@ -46,7 +46,7 @@ app.controller('DemoController', function ($scope, modal) {
 Create a new `ModalController` and use it as follows.
 
 ```js
-app.controller('ModalController', function ($scope, $modalInstance, $http) {
+app.controller('ModalController', function ($scope, modalInstance, $http) {
     $scope.item = {};
 
     $scope.categories = [];

@@ -14,6 +14,11 @@
             size: 'md'
         };
 
+        // check for boostrap dependency
+        if (typeof $.fn.modal == 'undefined') {
+            throw new Error('Bootstrap Modal library has not been found.');
+        }
+
         // init
         var body = $document.find('body').eq(0),
             modalContainer = angular.element('<div id="modal-container"></div>'),
