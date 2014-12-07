@@ -57,7 +57,7 @@ app.controller('ModalController', function ($scope, modalInstance, $http) {
 
     $scope.save = function () {
         $scope.items.push($scope.item);
-        $modalInstance.close();
+        modalInstance.close();
     };
 });
 ```
