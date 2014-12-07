@@ -1,3 +1,12 @@
+### 0.0.4 (2014-12-07)
+
+
+#### Bug Fixes
+
+* throw an error when boostrap modal library is missing #8 ([79806456]([object Object]/commit/79806456a57eca51852083ec3f04922253978041))
+* wrong documentation links #8 ([e65973d3]([object Object]/commit/e65973d3bcbf389f9368e4c6c48ff8d13cf3eda7))
+
+
 ### 0.0.3 (2014-12-07)
 
 

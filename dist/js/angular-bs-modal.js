@@ -1,5 +1,5 @@
 /*!
- * Angular BS Modal v0.0.3 (https://github.com/martinjezek/angular-bs-modal)
+ * Angular BS Modal v0.0.4 (https://github.com/martinjezek/angular-bs-modal)
  * Martin Jezek <info@martin-jezek.com>
  * Licensed under MIT (https://raw.githubusercontent.com/martinjezek/angular-bs-modal/master/LICENSE)
  */
@@ -14,7 +14,9 @@
             show: !0,
             templateUrl: null,
             size: "md"
-        }, body = $document.find("body").eq(0), modalContainer = angular.element('<div id="modal-container"></div>'), modalTemplateString = '<div class="modal fade"><div class="modal-dialog modal-{{$modalOptions.size}}"><div class="modal-content"></div></div></div>';
+        };
+        if ("undefined" == typeof $.fn.modal) throw new Error("Bootstrap Modal library has not been found.");
+        var body = $document.find("body").eq(0), modalContainer = angular.element('<div id="modal-container"></div>'), modalTemplateString = '<div class="modal fade"><div class="modal-dialog modal-{{$modalOptions.size}}"><div class="modal-content"></div></div></div>';
         body.append(modalContainer), this.open = function(modalOptions) {
             var options = angular.extend({}, defaultOptions, modalOptions);
             $http.get(options.templateUrl, {
