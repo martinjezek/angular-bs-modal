@@ -2,11 +2,11 @@
 
 module.exports = function(gulp, plugins) {
 
-    // Defaut /task/
-    // Gulp default is set to run a Gulp webserver with Gulp watches.
+    // Start /task/
+    // Gulp start sets to run a Gulp webserver with Gulp watches.
     // $ gulp
     //
-    gulp.task('default', function(done) {
+    gulp.task('start', function(done) {
         plugins.runSequence('dist', 'demo', 'connect', 'watch', done);
     });
 

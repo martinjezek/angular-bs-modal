@@ -21,6 +21,9 @@
     "url": "https://raw.githubusercontent.com/martinjezek/angular-bs-modal/master/LICENSE"
   },
   "scripts": {
+    "start": "node node_modules/gulp/bin/gulp start",
+    "prestart": "npm install",
+    "postinstall": "node node_modules/bower/bin/bower install",
     "test": "gulp test"
   },
   "devDependencies": {
