@@ -1,5 +1,5 @@
 /*!
- * Angular BS Modal v0.0.4 (https://github.com/martinjezek/angular-bs-modal)
+ * Angular BS Modal v0.0.5 (https://github.com/martinjezek/angular-bs-modal)
  * Martin Jezek <info@martin-jezek.com>
  * Licensed under MIT (https://raw.githubusercontent.com/martinjezek/angular-bs-modal/master/LICENSE)
  */

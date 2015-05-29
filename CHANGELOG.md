@@ -1,3 +1,13 @@
+### 0.0.5 (2015-05-29)
+
+
+#### Bug Fixes
+
+* fix gulp test task #10 ([1ab7b434]([object Object]/commit/1ab7b434bcb1b24920640161fea6d979905ea950))
+* fix the project dependencies #10 ([1f6d6468]([object Object]/commit/1f6d6468a23788dc8a941566ecde1b5dffb3a75a))
+* change documentation modal instance property name ([7901f332]([object Object]/commit/7901f33296adb09e4a0c21b8ee93208cab66b157))
+
+
 ### 0.0.4 (2014-12-07)
 
 
