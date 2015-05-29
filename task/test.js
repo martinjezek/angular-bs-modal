@@ -7,7 +7,7 @@ module.exports = function(gulp, plugins) {
     // $ gulp test
     //
     gulp.task('test', function(done) {
-        plugins.runSequence('jshint', 'jasmine', done);
+        plugins.runSequence('jshint', done);
     });
 
     // JSHint /test/
@@ -27,20 +27,20 @@ module.exports = function(gulp, plugins) {
         .pipe(plugins.jshint.reporter('fail'));
     });
 
-    // Jasmine /test/
-    // Behavior-Driven JavaScript.
-    // $ gulp jasmine
-    //
-    gulp.task('jasmine', function() {
-        return gulp.src('./test/**/*.js')
-            .pipe(plugins.jasmine({
-                // keepRunner: './',
-                integration: true,
-                vendor: [
-                    './demo/build/bower_components/jquery/dist/jquery.min.js',
-                    './demo/build/bower_components/**/dist/**/*.min.js',
-                    './dist/**/*.min.js'
-                ]
-            }));
-    });
+    // // Jasmine /test/
+    // // Behavior-Driven JavaScript.
+    // // $ gulp jasmine
+    // //
+    // gulp.task('jasmine', function() {
+    //     return gulp.src('./test/**/*.js')
+    //         .pipe(plugins.jasmine({
+    //             // keepRunner: './',
+    //             integration: true,
+    //             vendor: [
+    //                 './demo/build/bower_components/jquery/dist/jquery.min.js',
+    //                 './demo/build/bower_components/**/dist/**/*.min.js',
+    //                 './dist/**/*.min.js'
+    //             ]
+    //         }));
+    // });
 };

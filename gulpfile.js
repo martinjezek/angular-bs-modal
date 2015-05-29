@@ -22,7 +22,7 @@ var gulp            = require('gulp'),
         fs          : require('fs')
     };
 
-require('./task/default')(gulp, plugins);
+require('./task/start')(gulp, plugins);
 require('./task/test')(gulp, plugins);
 require('./task/demo')(gulp, plugins);
 require('./task/dist')(gulp, plugins);
